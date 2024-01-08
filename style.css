@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../assets/bg.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #fff;
+}
+
+label {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+input {
+  min-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* 이미지를 카드에 맞게 중앙에 정렬 */
+}
+
+h3, p, img, button {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.movie-card, header, .search {
+  animation: fadeIn 1s ease-in-out;
+}
